@@ -1,6 +1,6 @@
 ---
 - name: Hello World Example
-  hosts: webservers
+  hosts: windowsservers
   tasks:
     - name: Print hello message
       debug:
