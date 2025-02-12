@@ -12,7 +12,7 @@ phases:
             - ansible-galaxy install -r requirements.yml
     build:
         commands:
-            - ansible-playbook hello-world.yml
+            - ansible-playbook -i inventory hello-world.yml
 artifacts:
     files:
         - '**/*'
