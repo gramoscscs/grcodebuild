@@ -1,12 +1,18 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      python: 3.7
-  pre_build:
-    commands:
-      - python3 -m pip install ansible
-  build:
-    commands:
-      - ansible-playbook -i inventory hello-world.yml
+    install:
+        runtime-versions:
+            python: 3.8
+        commands:
+            - pip install ansible boto3
+    pre_build:
+        commands:
+            - ansible --version
+            - ansible-galaxy install -r requirements.yml
+    build:
+        commands:
+            - ansible-playbook playbook.yml
+artifacts:
+    files:
+        - '**/*'
