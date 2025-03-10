@@ -12,7 +12,10 @@ phases:
             - ansible-galaxy install -r requirements.yml
     build:
         commands:
-            - ansible-playbook -i inventory hello-world.yml --user ec2-user --key-file ~/.ssh/ansible.pem
+            - ansible-playbook -i inventory hello-world.yml --user ec2-user --private-key ansible.pem
+    post_build:
+        commands:
+            - echo "Build completed"
 artifacts:
     files:
         - '**/*'
