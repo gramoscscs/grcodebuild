@@ -1,4 +1,4 @@
-[windowsservers]
-ec2-34-196-107-1.compute-1.amazonaws.com
-ec2-34-227-213-48.compute-1.amazonaws.com
-ec2-52-87-47-199.compute-1.amazonaws.com
+[linuxservers]
+ec2-44-218-186-118.compute-1.amazonaws.com
+ec2-54-174-253-95.compute-1.amazonaws.com
+ec2-3-218-123-235.compute-1.amazonaws.com
