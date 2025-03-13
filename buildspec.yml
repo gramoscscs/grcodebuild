@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+    secrets-manager:
+        SECRET_VALUE: "arn:aws:secretsmanager:us-east-1:558326840038:secret:GR-Ansible-Private-Key-FoYWft"
+
 phases:
     install:
         runtime-versions:
@@ -12,10 +16,14 @@ phases:
             - ansible-galaxy install -r requirements.yml
     build:
         commands:
-            - ansible-playbook -i inventory hello-world.yml --user ec2-user --private-key ansible.pem
+            - echo $SECRET_VALUE
+            - echo "Build started on " $(date)
+            - aws secretsmanager get-secret-value --region us-east-1 --secret-id $SECRET_VALUE --output text | tee ~/.ssh/ansible
+            - chmod 600 ~/.ssh/ansible
+            - ansible-playbook -i inventory hello-world.yml --user ec2-user --private-key ~/.ssh/ansible
     post_build:
         commands:
-            - echo "Build completed"
+            - echo "Build completed on " $(date)
 artifacts:
     files:
         - '**/*'
