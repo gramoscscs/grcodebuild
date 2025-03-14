@@ -18,9 +18,9 @@ phases:
         commands:
             - echo $SECRET_VALUE
             - echo "Build started on " $(date)
-            - aws secretsmanager get-secret-value --region us-east-1 --secret-id GR-Ansible-Private-Key --query SecretString --output text
-            - chmod 600 ~/.ssh/ansible.pem
-            - stat -c %a ~/.ssh/ansible.pem
+            - aws secretsmanager get-secret-value --region us-east-1 --secret-id GR-Ansible-Private-Key --query SecretString --output text | tee /home/ec2-user/.ssh/ansible.pem
+            - chmod 600 /home/ec2-user/.ssh/ansible.pem
+            - stat -c %a /home/ec2-user/.ssh/ansible.pem
             - ansible-playbook -i inventory hello-world.yml --user ec2-user --private-key ~/.ssh/ansible.pem
     post_build:
         commands:
