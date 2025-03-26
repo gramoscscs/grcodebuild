@@ -1,0 +1,7 @@
+---
+  ansuser: administrator
+  domain: test.local
+  netbios: TEST
+  domainadmin: test\administrator
+  dbpath: c:\ntds
+  sysvol: c:\sysvol
