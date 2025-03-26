@@ -9,6 +9,8 @@ phases:
             - echo "Installing prerequistes..."
             - pip install ansible
             - pip install pywinrm
+            - rm /usr/share/keyrings/corretto-keyring.gpg && wget -O - https://apt.corretto.aws/corretto.key | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/corretto-keyring.gpg && sudo apt update
+            - apt-get update
             - apt-get install -y powershell
             - pwsh -Command "$PSVersionTable.PSVersion"
     pre_build:
