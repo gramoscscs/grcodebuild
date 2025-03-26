@@ -14,7 +14,7 @@ phases:
     build:
         commands:
             - echo "Building project..."
-            - ansible-playbook -i inventory windows.yml
+            - ansible-playbook -i inventory dcpromo.yml
     post_build:
         commands:
             - echo "Build completed..."
