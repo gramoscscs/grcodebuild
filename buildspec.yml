@@ -4,9 +4,14 @@ phases:
     install:
         runtime-versions:
             python: 3.8
+            dotnet: latest
         commands:
+            - echo "Installing prerequistes..."
             - pip install ansible
             - pip install pywinrm
+            - apt-get update
+            - apt-get install -y powershell
+            - pwsh -Command "$PSVersionTable.PSVersion"
     pre_build:
         commands:
             - echo "Installing dependencies..."
@@ -14,6 +19,7 @@ phases:
     build:
         commands:
             - echo "Building project..."
+            - pwsh -Command "/AnsibleWinRMconfig.ps1"
             - ansible-playbook -i inventory dcpromo.yml
     post_build:
         commands:
