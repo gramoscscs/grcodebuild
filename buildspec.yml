@@ -17,7 +17,7 @@ phases:
             - rm packages-microsoft-prod.deb
             - apt-get update
             - apt-get install -y powershell
-            - pwsh -Command "$PSVersionTable.PSVersion"
+            - pwsh -Command "$PSVersionTable"
     pre_build:
         commands:
             - echo "Installing dependencies..."
