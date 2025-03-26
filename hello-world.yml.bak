@@ -1,7 +1,0 @@
----
-- name: Hello World Example
-  hosts: windowsservers
-  tasks:
-    - name: Print hello message
-      debug:
-        msg: "Hello, World!"

@@ -1,8 +1,0 @@
-# requirements.yml
----
-roles:
-  - src: geerlingguy.apache
-    version: 3.0.0
-collections:
-  - name: community.general
-    version: 3.2.0

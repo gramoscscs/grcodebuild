@@ -1,4 +1,6 @@
-[linuxservers]
-ec2-44-210-185-151.compute-1.amazonaws.com ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-ec2-54-237-76-57.compute-1.amazonaws.com ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-ec2-52-204-102-218.compute-1.amazonaws.com ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+[primarydc]
+ec2-54-86-93-176.compute-1.amazonaws.com ansible_winrm_server_cert_validation=ignore  ansible_winrm_transport=basic ansible_connection=winrm ansible_shell_type=powershell ansible_user=administrator ansible_password=MEVZpTHIjV;1e7SwK6OKHQ.EvH=1sZWA
+
+[secondarydc]
+ec2-52-204-13-42.compute-1.amazonaws.com ansible_winrm_server_cert_validation=ignore  ansible_winrm_transport=basic ansible_connection=winrm ansible_shell_type=powershell ansible_user=administrator ansible_password=MEVZpTHIjV;1e7SwK6OKHQ.EvH=1sZWA
+ec2-54-243-173-178.compute-1.amazonaws.com ansible_winrm_server_cert_validation=ignore  ansible_winrm_transport=basic ansible_connection=winrm ansible_shell_type=powershell ansible_user=administrator ansible_password=MEVZpTHIjV;1e7SwK6OKHQ.EvH=1sZWA

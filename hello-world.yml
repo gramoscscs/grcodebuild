@@ -1,7 +1,0 @@
----
-- name: Hello World Example
-  hosts: linuxservers
-  tasks:
-    - name: Print hello message
-      debug:
-        msg: "Hello, World!"
