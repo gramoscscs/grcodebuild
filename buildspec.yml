@@ -9,7 +9,8 @@ phases:
             - echo "Installing prerequistes..."
             - pip install ansible
             - pip install pywinrm
-            - rm /usr/share/keyrings/corretto-keyring.gpg && wget -O - https://apt.corretto.aws/corretto.key | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/corretto-keyring.gpg && sudo apt update
+            - curl -fsSL https://apt.corretto.aws/corretto.key > /etc/apt/trusted.gpg.d/corretto.asc
+            - wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo tee /etc/apt/trusted.gpg.d/google.asc >/dev/null
             - apt-get update
             - apt-get install -y powershell
             - pwsh -Command "$PSVersionTable.PSVersion"
