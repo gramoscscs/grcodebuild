@@ -20,7 +20,7 @@ phases:
             - echo "Building project..."
             - aws ssm send-command \
                 --document-name "run_powershell_cmd" \
-                --targets "Key=instanceIds,Values=<INSTANCE_ID>" \
+                --targets "Key=instanceIds,Values=i-01c6648cb07692045" \
                 --region us-east-1 \
                 --comment "Running PowerShell script via SSM" \
                 --parameters '{}' \
