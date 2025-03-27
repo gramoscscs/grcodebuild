@@ -9,20 +9,12 @@ phases:
             - echo "Installing prerequistes..."
             - pip install ansible
             - pip install pywinrm
-#            - wget -O - https://apt.corretto.aws/corretto.key | sudo gpg --dearmor -o /usr/share/keyrings/corretto-keyring.gpg && \
-#            - echo "deb [signed-by=/usr/share/keyrings/corretto-keyring.gpg] https://apt.corretto.aws stable main" | sudo tee /etc/apt/sources.list.d/corretto.list
-#            - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys A122542AB04F24E3
-#            - wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo tee /etc/apt/trusted.gpg.d/google.asc >/dev/null
-#            - wget -q https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-#            - sudo dpkg -i packages-microsoft-prod.deb
-#            - rm packages-microsoft-prod.deb
+            - wget -q https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+            - sudo dpkg -i packages-microsoft-prod.deb
+            - rm packages-microsoft-prod.deb
             - apt-get update
             - apt-get install -y powershell
             - pwsh -Command "$PSVersionTable"
-#    pre_build:
-#        commands:
-#            - echo "Installing dependencies..."
-#            - ansible --version
     build:
         commands:
             - echo "Building project..."
