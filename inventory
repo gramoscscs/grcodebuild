@@ -1,6 +1,6 @@
 [primarydc]
-ec2-3-231-251-248.compute-1.amazonaws.com ansible_winrm_server_cert_validation=ignore  ansible_winrm_transport=basic ansible_connection=winrm ansible_shell_type=powershell ansible_user=administrator ansible_password=;giJ25jWX87$FO@-e?EW3p00%j?rAIV4
+ec2-13-216-237-145.compute-1.amazonaws.com ansible_winrm_server_cert_validation=ignore  ansible_winrm_transport=basic ansible_connection=winrm ansible_shell_type=powershell ansible_user=administrator ansible_password=b5vhIpBg7c-%(QHLvgv-CksXZIn&%m-Q
 
 [secondarydc]
-ec2-18-211-52-138.compute-1.amazonaws.com ansible_winrm_server_cert_validation=ignore  ansible_winrm_transport=basic ansible_connection=winrm ansible_shell_type=powershell ansible_user=administrator ansible_password=-y65y*R&5C38HDqtLT4%jojx6OUu;7ij
-ec2-52-200-29-149.compute-1.amazonaws.com ansible_winrm_server_cert_validation=ignore  ansible_winrm_transport=basic ansible_connection=winrm ansible_shell_type=powershell ansible_user=administrator ansible_password=iT9W;.3*OBRAipZGO1?l(go7ncu2U4pl
+ec2-54-174-201-12.compute-1.amazonaws.com ansible_winrm_server_cert_validation=ignore  ansible_winrm_transport=basic ansible_connection=winrm ansible_shell_type=powershell ansible_user=administrator ansible_password=xxeN%&!S3EnjW!mRcxlO0i(s-&BsBuff
+ec2-34-204-152-28.compute-1.amazonaws.com ansible_winrm_server_cert_validation=ignore  ansible_winrm_transport=basic ansible_connection=winrm ansible_shell_type=powershell ansible_user=administrator ansible_password=Q3bn6zJeLVgDgzY8;Z)-.YrZ83FCx7UG
