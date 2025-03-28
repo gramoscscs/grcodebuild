@@ -2,8 +2,8 @@
 - name: Promote Windows Server to Primary Domain Controller
   hosts: primarydc
   vars_files:
-    - /ansible/creds.yml
-    - /ansible/winvar.yml
+    - /creds.yml
+    - /winvar.yml
 
   vars:
     ansible_user: '{{ ansuser }}'

@@ -7,8 +7,6 @@ phases:
             dotnet: latest
         commands:
             - echo "Installing prerequisites..."
-            - mkdir -p /ansible/vars
-            - cp /ansible/vars/creds.yml /ansible/vars/creds.yml
             - cp /ansible/vars/vars.yml /ansible/vars/vars.yml
             - pip install ansible
             - pip install pywinrm
